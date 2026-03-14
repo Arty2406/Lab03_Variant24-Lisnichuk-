@@ -25,7 +25,7 @@
 ## Технические требования
 
 
-Данный проект был разработан на языке C# в интегрированной среде разработки Visual Studio.
+Данный проект был разработан на языке C# в интегрированной среде разработки Visual Studio. Microsoft Visual Studio поддерживает несколько фреймворков от Microsoft. Среди них — .NET Framework, .NET Core, UWP (Universal Windows Platform) и Silverlight.
 
 
 Чтобы скачать и установить Visual Studio для Windows, нужно: 
