@@ -13,6 +13,7 @@ namespace IntervalMergerApp
             if (intervals == null)
                 throw new ArgumentNullException(nameof(intervals));
 
+            // инструмент для измерения промежутков времени с высокой точностью (обычно до сотых долей секунды)
             var stopwatch = Stopwatch.StartNew();
             var result = new List<Interval>(intervals);
 
@@ -44,6 +45,7 @@ namespace IntervalMergerApp
             // Сортируем результат по Start для соответствия ожидаемому порядку
             result = result.OrderBy(i => i.Start).ToList();
 
+            // остановка и передача данных из Stopwatch
             stopwatch.Stop();
             return (result, stopwatch.Elapsed.TotalMilliseconds);
         }
@@ -115,6 +117,11 @@ namespace IntervalMergerApp
                     return false;
             }
             return true;
+        }
+
+        internal static bool AreResultsEqual((List<Interval> result, double elapsedMilliseconds) resultBruteForce, (List<Interval> result, double elapsedMilliseconds) resultOptimized)
+        {
+            throw new NotImplementedException();
         }
     }
 }
